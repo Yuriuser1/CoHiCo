@@ -21,16 +21,14 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies
-      run: npm install
+      run: npm install --legacy-peer-deps
 
-    - name: Create static export
+    - name: Prepare static files
       run: |
-        npm run build
         mkdir -p dist
         cp -r static_deploy/* dist/ || true
         ls -la dist/
-      env:
-        NODE_ENV: production
+        echo "✅ Static files prepared for deployment"
 
     - name: Deploy to Reg.ru via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
