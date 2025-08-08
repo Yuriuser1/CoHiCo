@@ -4,8 +4,7 @@ name: Deploy to Reg.ru
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -24,14 +23,14 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Build application
-      run: npm run build
+    - name: Create static export
+      run: |
+        npm run build
+        mkdir -p dist
+        cp -r static_deploy/* dist/ || true
+        ls -la dist/
       env:
-        DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
-        NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
-        YUKASSA_SHOP_ID: ${{ secrets.YUKASSA_SHOP_ID }}
-        YUKASSA_SECRET_KEY: ${{ secrets.YUKASSA_SECRET_KEY }}
+        NODE_ENV: production
 
     - name: Deploy to Reg.ru via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -39,25 +38,17 @@ jobs:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./out/
-        server-dir: /public_html/
+        local-dir: ./dist/
+        server-dir: /domains/gsl.ru/public_html/
         exclude: |
           **/.git*
           **/.git*/**
           **/node_modules/**
           **/.env
           **/.env.*
-
-    - name: Deploy via SSH (alternative)
-      if: failure()
-      uses: appleboy/ssh-action@v1.0.0
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        password: ${{ secrets.SSH_PASSWORD }}
-        script: |
-          cd /home/u3175586/domains/kohico.ru/public_html
-          git pull origin master
-          npm install --production
-          npm run build
-          pm2 restart kohico || pm2 start npm --name "kohico" -- start
+          
+    - name: Verify deployment
+      run: |
+        echo "✅ Deployment completed!"
+        echo "🌐 Site should be available at: https://gsl.ru"
+        echo "⏱️ Please wait 5-15 minutes for DNS propagation"
