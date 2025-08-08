@@ -3,9 +3,9 @@ name: Deploy to Reg.ru
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   deploy:
@@ -57,7 +57,7 @@ jobs:
         password: ${{ secrets.SSH_PASSWORD }}
         script: |
           cd /home/u3175586/domains/kohico.ru/public_html
-          git pull origin main
+          git pull origin master
           npm install --production
           npm run build
           pm2 restart kohico || pm2 start npm --name "kohico" -- start
