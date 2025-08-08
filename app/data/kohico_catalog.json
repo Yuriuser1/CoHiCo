@@ -1,0 +1,481 @@
+{
+  "catalog": {
+    "store_info": {
+      "name": "KOHICO",
+      "description": "Премиальная корейская косметика",
+      "specialization": "Клуб почитателей корейской косметики премиальных марок",
+      "target_brands": ["Sulwhasoo", "AmorePacific", "The History of Whoo"],
+      "telegram_channel": "t.me/KoHiCo",
+      "website": "kohico.ru"
+    },
+    "categories": {
+      "skincare": {
+        "name": "Уход за кожей",
+        "description": "Премиальные средства для комплексного ухода за кожей лица",
+        "subcategories": {
+          "cleansing": {
+            "name": "Очищение",
+            "description": "Гидрофильные масла, пенки, гели для умывания",
+            "products": []
+          },
+          "toning": {
+            "name": "Тонизирование", 
+            "description": "Тоники, эссенции для подготовки кожи",
+            "products": []
+          },
+          "serums": {
+            "name": "Сыворотки и эссенции",
+            "description": "Концентрированные средства направленного действия",
+            "products": []
+          },
+          "moisturizing": {
+            "name": "Увлажнение",
+            "description": "Кремы, эмульсии для увлажнения и питания",
+            "products": []
+          },
+          "eye_care": {
+            "name": "Уход за кожей вокруг глаз",
+            "description": "Специализированные средства для деликатной зоны",
+            "products": []
+          },
+          "masks": {
+            "name": "Маски",
+            "description": "Тканевые, альгинатные, ночные маски",
+            "products": []
+          },
+          "sun_protection": {
+            "name": "Защита от солнца",
+            "description": "Солнцезащитные средства с SPF",
+            "products": []
+          }
+        }
+      },
+      "makeup": {
+        "name": "Макияж",
+        "description": "Декоративная косметика премиум-класса",
+        "subcategories": {
+          "face": {
+            "name": "Для лица",
+            "description": "BB/CC кремы, кушоны, пудры",
+            "products": []
+          },
+          "lips": {
+            "name": "Для губ",
+            "description": "Помады, бальзамы, тинты",
+            "products": []
+          }
+        }
+      },
+      "body_care": {
+        "name": "Уход за телом",
+        "description": "Средства для ухода за кожей тела",
+        "subcategories": {
+          "body": {
+            "name": "Для тела",
+            "description": "Кремы, лосьоны, скрабы для тела",
+            "products": []
+          }
+        }
+      },
+      "sets": {
+        "name": "Наборы",
+        "description": "Готовые комплекты для ухода",
+        "subcategories": {
+          "gift_sets": {
+            "name": "Подарочные наборы",
+            "description": "Элегантные наборы в подарочной упаковке",
+            "products": []
+          },
+          "travel_sets": {
+            "name": "Дорожные наборы",
+            "description": "Миниатюры для путешествий",
+            "products": []
+          }
+        }
+      }
+    },
+    "brands": {
+      "sulwhasoo": {
+        "name": "Sulwhasoo",
+        "country": "Южная Корея",
+        "parent_company": "Amore Pacific Corporation",
+        "founded": 1967,
+        "description": "Премиальный бренд, сочетающий традиционную корейскую медицину с современными технологиями",
+        "philosophy": "Гармония противоположных энергий (Инь и Ян) и интеграция мудрости природы с научными инновациями",
+        "key_ingredients": ["женьшень", "сосна", "слива", "астрагал", "солодка"],
+        "target_audience": "Женщины 30+, заботящиеся о долгосрочном здоровье кожи",
+        "price_range": "премиум",
+        "product_lines": {
+          "first_care": {
+            "name": "First Care Activating",
+            "description": "Первый шаг в уходе для активации и подготовки кожи",
+            "key_products": ["First Care Activating Serum", "First Care Activating Mask"],
+            "benefits": ["улучшение циркуляции", "повышение сияния", "подготовка к последующему уходу"]
+          },
+          "concentrated_ginseng": {
+            "name": "Concentrated Ginseng",
+            "description": "Интенсивный антивозрастной уход с ферментированным женьшенем",
+            "key_products": ["Concentrated Ginseng Renewing Serum", "Concentrated Ginseng Renewing Cream", "Concentrated Ginseng Rejuvenating Eye Cream"],
+            "benefits": ["разглаживание морщин", "повышение упругости", "детоксикация"]
+          },
+          "essential": {
+            "name": "Essential",
+            "description": "Ежедневный уход для баланса и укрепления кожи",
+            "key_products": ["Essential Balancing Water", "Essential Balancing Emulsion", "Essential Firming Cream"],
+            "benefits": ["глубокое увлажнение", "укрепление контуров", "предотвращение старения"]
+          }
+        }
+      },
+      "amorepacific": {
+        "name": "AmorePacific",
+        "country": "Южная Корея",
+        "founded": 1945,
+        "description": "Ведущая корейская косметическая компания, владеющая более 30 брендами",
+        "philosophy": "Инновационные разработки с использованием антиоксидантов зеленого чая и натуральных компонентов",
+        "key_ingredients": ["зеленый чай", "бамбук", "женьшень", "гиалуроновая кислота"],
+        "target_audience": "Широкая аудитория, ценящая инновации и натуральность",
+        "price_range": "премиум",
+        "awards": ["Самая инновационная компания года Forbes 2015"],
+        "product_lines": {
+          "treatment_enzyme": {
+            "name": "Treatment Enzyme",
+            "description": "Очищающие средства с пробиотическими ферментами",
+            "key_products": ["Treatment Enzyme Cleansing Foam", "Treatment Enzyme Peel Cleansing Powder"],
+            "benefits": ["мягкое очищение", "отшелушивание", "увлажнение"]
+          },
+          "moisture_plumping": {
+            "name": "Moisture Plumping",
+            "description": "Увлажняющая линия с бамбуковым нектаром",
+            "key_products": ["Moisture Plumping Nectar Cream", "Moisture Plumping Rejuvenating Eye Gel"],
+            "benefits": ["интенсивное увлажнение", "повышение эластичности", "освежение"]
+          },
+          "time_response": {
+            "name": "Time Response",
+            "description": "Антивозрастная линия на основе зеленого чая",
+            "key_products": ["Time Response Skin Reserve Cream", "Time Response Eye Reserve Cream", "Time Response Skin Reserve Serum"],
+            "benefits": ["борьба с морщинами", "улучшение тона", "активизация молодости"]
+          }
+        }
+      },
+      "the_history_of_whoo": {
+        "name": "The History of Whoo",
+        "country": "Южная Корея",
+        "parent_company": "LG Household & Health Care",
+        "description": "Люксовый бренд, вдохновленный древними императорскими рецептами красоты",
+        "philosophy": "Слияние традиционной восточной медицины с современными нанотехнологиями",
+        "key_ingredients": ["травяные экстракты", "золото", "жемчуг", "дендробиум", "женьшень"],
+        "target_audience": "Ценители роскоши и традиций, женщины 35+",
+        "price_range": "люкс",
+        "heritage": "Основан на рецепте Gongjindian для императорской семьи",
+        "product_lines": {
+          "cheongidan": {
+            "name": "Cheongidan",
+            "description": "Сияющая регенерирующая линия с женьшенем",
+            "key_products": ["Cheongidan Radiant Regenerating Essence", "Cheongidan Essence Set"],
+            "benefits": ["глубокое увлажнение", "борьба с тусклостью", "антивозрастной эффект"]
+          },
+          "jinyulhyang": {
+            "name": "Jinyulhyang",
+            "description": "Интенсивная восстанавливающая линия",
+            "key_products": ["Jinyulhyang Intensive Revitalizing Essence", "Jinyulhyang 3 Set"],
+            "benefits": ["интенсивное восстановление", "питание", "омоложение"]
+          },
+          "gongjinhyang": {
+            "name": "Gongjinhyang",
+            "description": "Базовая линия с травяными экстрактами",
+            "key_products": ["Gongjinhyang Facial Cream Cleanser", "Gong Jin Hyang Hydrating Sunscreen Fluid"],
+            "benefits": ["мягкое очищение", "pH-баланс", "защита от UV"]
+          }
+        }
+      }
+    },
+    "products": [
+      {
+        "id": "SUL001",
+        "name": "First Care Activating Serum",
+        "brand": "sulwhasoo",
+        "category": "skincare",
+        "subcategory": "serums",
+        "product_line": "first_care",
+        "description": "Активирующая сыворотка - первый шаг в уходе для подготовки кожи к последующим средствам",
+        "key_ingredients": ["астрагал", "солодка", "корейские травяные экстракты"],
+        "benefits": ["улучшение циркуляции", "повышение сияния", "подготовка кожи"],
+        "skin_types": ["все типы кожи"],
+        "age_group": "25+",
+        "volume_options": ["8ml", "60ml", "90ml"],
+        "price_range": {
+          "min": 1200,
+          "max": 15000
+        },
+        "usage": "Нанести на очищенную кожу перед основным уходом",
+        "texture": "легкая эссенция",
+        "awards": ["более 10 миллионов проданных флаконов с 1997 года"],
+        "in_stock": true,
+        "popularity_score": 95
+      },
+      {
+        "id": "SUL002", 
+        "name": "Concentrated Ginseng Renewing Serum",
+        "brand": "sulwhasoo",
+        "category": "skincare",
+        "subcategory": "serums",
+        "product_line": "concentrated_ginseng",
+        "description": "Интенсивная антивозрастная сыворотка с ферментированным женьшенем",
+        "key_ingredients": ["ферментированный красный женьшень", "мед"],
+        "benefits": ["разглаживание морщин", "повышение упругости", "детоксикация"],
+        "skin_types": ["зрелая кожа", "нормальная", "сухая"],
+        "age_group": "35+",
+        "volume_options": ["30ml", "50ml"],
+        "price_range": {
+          "min": 8000,
+          "max": 25000
+        },
+        "usage": "Применять утром и вечером после тоника",
+        "texture": "насыщенная сыворотка",
+        "in_stock": true,
+        "popularity_score": 90
+      },
+      {
+        "id": "SUL003",
+        "name": "Concentrated Ginseng Renewing Cream",
+        "brand": "sulwhasoo", 
+        "category": "skincare",
+        "subcategory": "moisturizing",
+        "product_line": "concentrated_ginseng",
+        "description": "Питательный крем для глубокого увлажнения и повышения эластичности",
+        "key_ingredients": ["ферментированный женьшень", "мед", "травяные экстракты"],
+        "benefits": ["глубокое питание", "улучшение эластичности", "антивозрастной эффект"],
+        "skin_types": ["сухая", "нормальная", "зрелая"],
+        "age_group": "30+",
+        "volume_options": ["60ml"],
+        "variants": ["Classic", "Soft"],
+        "price_range": {
+          "min": 12000,
+          "max": 30000
+        },
+        "usage": "Завершающий этап вечернего ухода",
+        "texture": "насыщенный крем",
+        "in_stock": true,
+        "popularity_score": 88
+      },
+      {
+        "id": "AMP001",
+        "name": "Treatment Enzyme Cleansing Foam",
+        "brand": "amorepacific",
+        "category": "skincare", 
+        "subcategory": "cleansing",
+        "product_line": "treatment_enzyme",
+        "description": "Увлажняющая пенка для умывания с пробиотическими ферментами зеленого чая",
+        "key_ingredients": ["пробиотические ферменты зеленого чая", "гиалуроновая кислота", "экстракт хлопка"],
+        "benefits": ["мягкое очищение", "увлажнение", "успокаивание"],
+        "skin_types": ["все типы кожи", "чувствительная"],
+        "age_group": "18+",
+        "volume_options": ["31ml", "125ml"],
+        "price_range": {
+          "min": 970,
+          "max": 4500
+        },
+        "usage": "Утром и вечером на влажную кожу",
+        "texture": "мягкая пена",
+        "bestseller": true,
+        "in_stock": true,
+        "popularity_score": 92
+      },
+      {
+        "id": "AMP002",
+        "name": "Time Response Skin Reserve Cream",
+        "brand": "amorepacific",
+        "category": "skincare",
+        "subcategory": "moisturizing", 
+        "product_line": "time_response",
+        "description": "Антивозрастной крем на основе зеленого чая для улучшения упругости и тона кожи",
+        "key_ingredients": ["экстракт зеленого чая", "антиоксиданты", "пептиды"],
+        "benefits": ["улучшение упругости", "выравнивание тона", "антиоксидантная защита"],
+        "skin_types": ["зрелая", "нормальная", "комбинированная"],
+        "age_group": "30+",
+        "volume_options": ["50ml"],
+        "price_range": {
+          "min": 15000,
+          "max": 35000
+        },
+        "usage": "Утром и вечером после сыворотки",
+        "texture": "питательный крем",
+        "in_stock": true,
+        "popularity_score": 85
+      },
+      {
+        "id": "WHO001",
+        "name": "Cheongidan Radiant Regenerating Essence",
+        "brand": "the_history_of_whoo",
+        "category": "skincare",
+        "subcategory": "serums",
+        "product_line": "cheongidan", 
+        "description": "Сияющая регенерирующая эссенция с женьшенем для глубокого увлажнения",
+        "key_ingredients": ["женьшень", "золото", "травяные экстракты", "жемчужная пудра"],
+        "benefits": ["глубокое увлажнение", "сияние", "регенерация"],
+        "skin_types": ["все типы кожи", "тусклая кожа"],
+        "age_group": "25+",
+        "volume_options": ["40ml", "90ml"],
+        "price_range": {
+          "min": 18000,
+          "max": 45000
+        },
+        "usage": "После тоника, перед кремом",
+        "texture": "роскошная эссенция",
+        "luxury": true,
+        "in_stock": true,
+        "popularity_score": 93
+      },
+      {
+        "id": "WHO002",
+        "name": "Gongjinhyang Facial Cream Cleanser",
+        "brand": "the_history_of_whoo",
+        "category": "skincare",
+        "subcategory": "cleansing",
+        "product_line": "gongjinhyang",
+        "description": "Мягкий крем-очиститель с травяными экстрактами для деликатного очищения",
+        "key_ingredients": ["травяные экстракты", "натуральные масла", "женьшень"],
+        "benefits": ["мягкое очищение", "питание", "сохранение pH-баланса"],
+        "skin_types": ["сухая", "чувствительная", "нормальная"],
+        "age_group": "20+",
+        "volume_options": ["180ml"],
+        "price_range": {
+          "min": 8000,
+          "max": 18000
+        },
+        "usage": "Массировать на сухую кожу, смыть теплой водой",
+        "texture": "кремовая",
+        "in_stock": true,
+        "popularity_score": 80
+      },
+      {
+        "id": "SET001",
+        "name": "Sulwhasoo First Care Activating Set",
+        "brand": "sulwhasoo",
+        "category": "sets",
+        "subcategory": "gift_sets",
+        "description": "Подарочный набор с активирующей сывороткой и дополнительными средствами",
+        "contents": [
+          "First Care Activating Serum 60ml",
+          "Essential Balancing Water 25ml", 
+          "Essential Balancing Emulsion 25ml",
+          "Concentrated Ginseng Renewing Cream 8ml"
+        ],
+        "benefits": ["полный уход", "знакомство с брендом", "подарочная упаковка"],
+        "skin_types": ["все типы кожи"],
+        "age_group": "25+",
+        "price_range": {
+          "min": 18000,
+          "max": 25000
+        },
+        "gift_packaging": true,
+        "limited_edition": false,
+        "in_stock": true,
+        "popularity_score": 87
+      }
+    ],
+    "skin_concerns": {
+      "anti_aging": {
+        "name": "Антивозрастной уход",
+        "description": "Средства для борьбы с признаками старения",
+        "recommended_ingredients": ["женьшень", "пептиды", "ретинол", "коллаген"],
+        "suitable_age": "30+"
+      },
+      "hydration": {
+        "name": "Увлажнение",
+        "description": "Интенсивное увлажнение для всех типов кожи",
+        "recommended_ingredients": ["гиалуроновая кислота", "керамиды", "бамбуковый нектар"],
+        "suitable_age": "18+"
+      },
+      "brightening": {
+        "name": "Осветление и сияние",
+        "description": "Выравнивание тона и придание сияния коже",
+        "recommended_ingredients": ["витамин C", "ниацинамид", "арбутин", "жемчужная пудра"],
+        "suitable_age": "20+"
+      },
+      "sensitive_care": {
+        "name": "Уход за чувствительной кожей",
+        "description": "Мягкие средства для деликатного ухода",
+        "recommended_ingredients": ["центелла азиатская", "алоэ", "ромашка"],
+        "suitable_age": "18+"
+      }
+    },
+    "price_segments": {
+      "premium": {
+        "name": "Премиум",
+        "range": "5000-15000 руб",
+        "description": "Высококачественные средства с инновационными формулами",
+        "brands": ["Sulwhasoo", "AmorePacific"]
+      },
+      "luxury": {
+        "name": "Люкс", 
+        "range": "15000-50000 руб",
+        "description": "Эксклюзивные средства с редкими ингредиентами",
+        "brands": ["The History of Whoo"]
+      }
+    },
+    "target_demographics": {
+      "young_adults": {
+        "age_range": "18-25",
+        "concerns": ["профилактика", "увлажнение", "защита"],
+        "budget": "средний",
+        "preferred_products": ["очищение", "увлажнение", "защита от солнца"]
+      },
+      "mature_women": {
+        "age_range": "30-45", 
+        "concerns": ["первые признаки старения", "упругость", "сияние"],
+        "budget": "премиум",
+        "preferred_products": ["сыворотки", "антивозрастные кремы", "эссенции"]
+      },
+      "luxury_seekers": {
+        "age_range": "35+",
+        "concerns": ["интенсивный антиэйдж", "роскошный уход", "эксклюзивность"],
+        "budget": "люкс",
+        "preferred_products": ["люксовые линии", "подарочные наборы", "лимитированные коллекции"]
+      }
+    },
+    "seasonal_recommendations": {
+      "spring": {
+        "focus": ["обновление", "детокс", "подготовка к солнцу"],
+        "recommended_products": ["пилинги", "витамин C", "SPF"]
+      },
+      "summer": {
+        "focus": ["защита", "увлажнение", "успокаивание"],
+        "recommended_products": ["солнцезащитные средства", "легкие текстуры", "охлаждающие маски"]
+      },
+      "autumn": {
+        "focus": ["восстановление", "питание", "подготовка к холодам"],
+        "recommended_products": ["восстанавливающие сыворотки", "питательные кремы"]
+      },
+      "winter": {
+        "focus": ["интенсивное питание", "защита от холода", "борьба с сухостью"],
+        "recommended_products": ["насыщенные кремы", "масла", "интенсивные маски"]
+      }
+    },
+    "marketing_insights": {
+      "key_selling_points": [
+        "Премиальное качество корейской косметики",
+        "Традиционные рецепты + современные технологии", 
+        "Проверенная эффективность",
+        "Роскошная упаковка",
+        "Эксклюзивность брендов"
+      ],
+      "target_keywords": [
+        "корейская косметика премиум",
+        "Sulwhasoo купить",
+        "AmorePacific официальный",
+        "The History of Whoo цена",
+        "антивозрастная корейская косметика",
+        "женьшень в косметике",
+        "люксовая корейская косметика"
+      ],
+      "content_themes": [
+        "История и традиции корейской красоты",
+        "Секреты молодости азиатских женщин",
+        "Инновации в косметологии",
+        "Ритуалы красоты",
+        "Натуральные ингредиенты"
+      ]
+    }
+  }
+}

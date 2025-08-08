@@ -1,0 +1,336 @@
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/kohico_shop/app/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+// NextAuth.js Models
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// User and Customer Models
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?
+  isAdmin       Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts Account[]
+  sessions Session[]
+  orders   Order[]
+  cart     Cart?
+  reviews  Review[]
+
+  @@map("users")
+}
+
+// Product Models
+model Brand {
+  id          String @id @default(cuid())
+  name        String @unique
+  slug        String @unique
+  country     String
+  description String @db.Text
+  philosophy  String @db.Text
+  founded     Int?
+  logoUrl     String?
+  active      Boolean @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  products Product[]
+
+  @@map("brands")
+}
+
+model Category {
+  id          String @id @default(cuid())
+  name        String
+  slug        String @unique
+  description String?
+  parentId    String?
+  imageUrl    String?
+  active      Boolean @default(true)
+  sortOrder   Int     @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  parent   Category?  @relation("CategoryChildren", fields: [parentId], references: [id])
+  children Category[] @relation("CategoryChildren")
+  products Product[]
+
+  @@map("categories")
+}
+
+model Product {
+  id               String  @id @default(cuid())
+  sku              String  @unique
+  name             String
+  slug             String  @unique
+  description      String  @db.Text
+  shortDescription String?
+  brandId          String
+  categoryId       String
+  productLine      String?
+  price            Int // в копейках
+  compareAtPrice   Int? // в копейках для скидок
+  volume           String?
+  texture          String?
+  skinTypes        String[] // массив типов кожи
+  ageGroup         String?
+  keyIngredients   String[] // массив ингредиентов
+  benefits         String[] // массив преимуществ
+  usage            String?
+  
+  // SEO and Marketing
+  metaTitle       String?
+  metaDescription String?
+  imageUrl        String?
+  images          String[] // дополнительные изображения
+  
+  // Inventory and Status
+  inStock         Boolean @default(true)
+  stockQuantity   Int     @default(0)
+  isActive        Boolean @default(true)
+  isFeatured      Boolean @default(false)
+  isBestseller    Boolean @default(false)
+  isNew           Boolean @default(false)
+  popularityScore Int     @default(0)
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  brand         Brand       @relation(fields: [brandId], references: [id])
+  category      Category    @relation(fields: [categoryId], references: [id])
+  orderItems    OrderItem[]
+  cartItems     CartItem[]
+  reviews       Review[]
+
+  @@map("products")
+}
+
+// Shopping Cart Models
+model Cart {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user  User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items CartItem[]
+
+  @@map("carts")
+}
+
+model CartItem {
+  id        String   @id @default(cuid())
+  cartId    String
+  productId String
+  quantity  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  cart    Cart    @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id])
+
+  @@unique([cartId, productId])
+  @@map("cart_items")
+}
+
+// Order Models
+model Order {
+  id              String      @id @default(cuid())
+  orderNumber     String      @unique
+  userId          String
+  status          OrderStatus @default(PENDING)
+  totalAmount     Int // в копейках
+  subtotalAmount  Int // в копейках
+  shippingAmount  Int // в копейках
+  discountAmount  Int         @default(0) // в копейках
+  
+  // Customer Info
+  customerName    String
+  customerEmail   String
+  customerPhone   String?
+  
+  // Shipping Address
+  shippingAddress Json
+  
+  // Delivery Info
+  deliveryType    DeliveryType
+  deliveryInfo    Json? // дополнительная информация о доставке
+  
+  // Payment Info
+  paymentStatus   PaymentStatus @default(PENDING)
+  paymentMethod   String?
+  paymentId       String? // ID платежа в ЮКасса
+  
+  // Tracking
+  trackingNumber  String?
+  notes           String?
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user       User        @relation(fields: [userId], references: [id])
+  items      OrderItem[]
+  statusLog  OrderStatusLog[]
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id        String   @id @default(cuid())
+  orderId   String
+  productId String
+  quantity  Int
+  price     Int // цена на момент заказа в копейках
+  createdAt DateTime @default(now())
+
+  order   Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id])
+
+  @@map("order_items")
+}
+
+model OrderStatusLog {
+  id        String   @id @default(cuid())
+  orderId   String
+  status    OrderStatus
+  comment   String?
+  createdAt DateTime @default(now())
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("order_status_log")
+}
+
+// Review Models
+model Review {
+  id        String   @id @default(cuid())
+  productId String
+  userId    String
+  rating    Int // 1-5
+  title     String?
+  comment   String?
+  isVerified Boolean @default(false)
+  isPublished Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  product Product @relation(fields: [productId], references: [id])
+  user    User    @relation(fields: [userId], references: [id])
+
+  @@unique([productId, userId])
+  @@map("reviews")
+}
+
+// CRM Models
+model Customer {
+  id             String   @id @default(cuid())
+  email          String   @unique
+  name           String?
+  phone          String?
+  dateOfBirth    DateTime?
+  registeredAt   DateTime?
+  lastOrderAt    DateTime?
+  totalSpent     Int      @default(0) // в копейках
+  orderCount     Int      @default(0)
+  loyaltyPoints  Int      @default(0)
+  marketingConsent Boolean @default(false)
+  notes          String?
+  tags           String[] // массив тегов для сегментации
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map("customers")
+}
+
+// Newsletter and Marketing
+model Newsletter {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+
+  @@map("newsletter")
+}
+
+model ContactForm {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String?
+  message   String   @db.Text
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@map("contact_forms")
+}
+
+// Enums
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  RETURNED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
+enum DeliveryType {
+  COURIER_SPB
+  SDEK
+  RUSSIAN_POST
+  YANDEX_DELIVERY
+}

@@ -1,0 +1,471 @@
+{
+  "extended_product_catalog": {
+    "sulwhasoo_products": [
+      {
+        "id": "SUL004",
+        "name": "Essential Balancing Water",
+        "category": "skincare",
+        "subcategory": "toning",
+        "product_line": "essential",
+        "description": "Балансирующий тоник с травами для глубокого увлажнения и успокоения",
+        "key_ingredients": ["портулак", "дереза китайская", "травяные экстракты"],
+        "volume": "125ml",
+        "price": 4500,
+        "benefits": ["глубокое увлажнение", "успокаивание", "подготовка к уходу"],
+        "texture": "гелеобразная",
+        "skin_types": ["все типы кожи"],
+        "usage": "После очищения, перед сывороткой"
+      },
+      {
+        "id": "SUL005", 
+        "name": "Essential Balancing Emulsion",
+        "category": "skincare",
+        "subcategory": "moisturizing",
+        "product_line": "essential",
+        "description": "Балансирующая эмульсия для увлажнения и укрепления кожи",
+        "key_ingredients": ["портулак", "дереза китайская", "керамиды"],
+        "volume": "125ml",
+        "price": 5200,
+        "benefits": ["увлажнение", "укрепление барьера", "баланс"],
+        "texture": "легкая эмульсия",
+        "skin_types": ["нормальная", "комбинированная"],
+        "usage": "После тоника и сыворотки"
+      },
+      {
+        "id": "SUL006",
+        "name": "Essential Firming Cream",
+        "category": "skincare", 
+        "subcategory": "moisturizing",
+        "product_line": "essential",
+        "description": "Укрепляющий крем для повышения упругости и предотвращения старения",
+        "key_ingredients": ["женьшень", "пептиды", "коллаген"],
+        "volume": "75ml",
+        "price": 8900,
+        "benefits": ["укрепление контуров", "повышение упругости", "антиэйдж"],
+        "texture": "питательный крем",
+        "skin_types": ["зрелая", "сухая"],
+        "age_group": "30+",
+        "usage": "Завершающий этап ухода"
+      },
+      {
+        "id": "SUL007",
+        "name": "Concentrated Ginseng Rejuvenating Eye Cream",
+        "category": "skincare",
+        "subcategory": "eye_care", 
+        "product_line": "concentrated_ginseng",
+        "description": "Омолаживающий крем для кожи вокруг глаз с женьшенем",
+        "key_ingredients": ["ферментированный женьшень", "пептиды", "кофеин"],
+        "volume": "20ml",
+        "price": 12500,
+        "benefits": ["разглаживание морщин", "уменьшение отеков", "повышение упругости"],
+        "texture": "насыщенный крем",
+        "skin_types": ["все типы кожи"],
+        "age_group": "30+",
+        "usage": "Утром и вечером вокруг глаз"
+      },
+      {
+        "id": "SUL008",
+        "name": "Gentle Cleansing Foam",
+        "category": "skincare",
+        "subcategory": "cleansing",
+        "description": "Мягкая пенка для умывания с травяными экстрактами",
+        "key_ingredients": ["женьшень", "мед", "аминокислоты"],
+        "volume": "200ml", 
+        "price": 3800,
+        "benefits": ["мягкое очищение", "сохранение влаги", "успокаивание"],
+        "texture": "кремовая пена",
+        "skin_types": ["сухая", "чувствительная", "нормальная"],
+        "usage": "Утром и вечером на влажную кожу"
+      },
+      {
+        "id": "SUL009",
+        "name": "Overnight Vitalizing Mask",
+        "category": "skincare",
+        "subcategory": "masks",
+        "description": "Ночная восстанавливающая маска для сияния кожи",
+        "key_ingredients": ["женьшень", "мед", "травяные экстракты"],
+        "volume": "120ml",
+        "price": 7200,
+        "benefits": ["ночное восстановление", "сияние", "питание"],
+        "texture": "гелевая маска",
+        "skin_types": ["все типы кожи"],
+        "usage": "2-3 раза в неделю на ночь"
+      }
+    ],
+    "amorepacific_products": [
+      {
+        "id": "AMP003",
+        "name": "Treatment Enzyme Peel Cleansing Powder",
+        "category": "skincare",
+        "subcategory": "cleansing",
+        "product_line": "treatment_enzyme", 
+        "description": "Энзимная отшелушивающая пудра с гиалуроновой кислотой",
+        "key_ingredients": ["ферменты зеленого чая", "гиалуроновая кислота", "рисовые энзимы"],
+        "volume": "40g",
+        "price": 5500,
+        "benefits": ["отшелушивание", "увлажнение", "очищение пор"],
+        "texture": "пудра, превращающаяся в пену",
+        "skin_types": ["все типы кожи"],
+        "usage": "2-3 раза в неделю вместо обычного очищения"
+      },
+      {
+        "id": "AMP004",
+        "name": "Moisture Plumping Nectar Cream",
+        "category": "skincare",
+        "subcategory": "moisturizing",
+        "product_line": "moisture_plumping",
+        "description": "Увлажняющий крем с бамбуковым нектаром для эластичности кожи",
+        "key_ingredients": ["бамбуковый нектар", "гиалуроновая кислота", "пептиды"],
+        "volume": "50ml",
+        "price": 8000,
+        "benefits": ["интенсивное увлажнение", "повышение эластичности", "сияние"],
+        "texture": "легкий крем",
+        "skin_types": ["сухая", "нормальная"],
+        "usage": "Утром и вечером после сыворотки"
+      },
+      {
+        "id": "AMP005",
+        "name": "Time Response Eye Reserve Cream", 
+        "category": "skincare",
+        "subcategory": "eye_care",
+        "product_line": "time_response",
+        "description": "Питательный крем для кожи вокруг глаз с зеленым чаем",
+        "key_ingredients": ["экстракт зеленого чая", "пептиды", "витамин E"],
+        "volume": "15ml",
+        "price": 9500,
+        "benefits": ["питание", "увлажнение", "активизация молодости"],
+        "texture": "насыщенный крем",
+        "skin_types": ["все типы кожи"],
+        "age_group": "25+",
+        "usage": "Утром и вечером вокруг глаз"
+      },
+      {
+        "id": "AMP006",
+        "name": "Vintage Single Extract Essence",
+        "category": "skincare",
+        "subcategory": "serums",
+        "description": "Эссенция с зеленым чаем для улучшения эластичности и тонуса",
+        "key_ingredients": ["концентрат зеленого чая", "антиоксиданты", "флавоноиды"],
+        "volume": "30ml",
+        "price": 12000,
+        "benefits": ["улучшение эластичности", "антиоксидантная защита", "выравнивание тона"],
+        "texture": "концентрированная эссенция",
+        "skin_types": ["зрелая", "тусклая"],
+        "age_group": "30+",
+        "bestseller": true,
+        "usage": "После тоника, перед кремом"
+      },
+      {
+        "id": "AMP007",
+        "name": "Color Control Cushion Compact",
+        "category": "makeup",
+        "subcategory": "face",
+        "description": "Кушон с SPF 50+ для идеального покрытия и защиты",
+        "key_ingredients": ["SPF 50+", "гиалуроновая кислота", "экстракт зеленого чая"],
+        "volume": "15g + refill",
+        "price": 6100,
+        "benefits": ["идеальное покрытие", "защита от солнца", "увлажнение"],
+        "coverage": "средняя",
+        "spf": "SPF 50+ PA+++",
+        "shades": ["21 Light", "23 Medium", "25 Medium Deep"],
+        "usage": "Наносить спонжем для равномерного покрытия"
+      }
+    ],
+    "whoo_products": [
+      {
+        "id": "WHO003",
+        "name": "Jinyulhyang Intensive Revitalizing Essence",
+        "category": "skincare",
+        "subcategory": "serums",
+        "product_line": "jinyulhyang",
+        "description": "Интенсивная восстанавливающая эссенция с императорскими травами",
+        "key_ingredients": ["императорские травы", "золото", "жемчуг", "женьшень"],
+        "volume": "40ml",
+        "price": 28000,
+        "benefits": ["интенсивное восстановление", "питание", "омоложение"],
+        "texture": "роскошная эссенция",
+        "skin_types": ["зрелая", "сухая"],
+        "age_group": "35+",
+        "luxury": true,
+        "usage": "После тоника, массирующими движениями"
+      },
+      {
+        "id": "WHO004",
+        "name": "Hwanyu Imperial Youth Eye Cream",
+        "category": "skincare", 
+        "subcategory": "eye_care",
+        "description": "Императорский крем для кожи вокруг глаз с антивозрастным эффектом",
+        "key_ingredients": ["императорские травы", "золото", "пептиды", "коллаген"],
+        "volume": "20ml",
+        "price": 22000,
+        "benefits": ["разглаживание морщин", "лифтинг", "сияние"],
+        "texture": "роскошный крем",
+        "skin_types": ["зрелая кожа"],
+        "age_group": "35+",
+        "luxury": true,
+        "usage": "Утром и вечером похлопывающими движениями"
+      },
+      {
+        "id": "WHO005",
+        "name": "Cheonyuldan Ultimate Regenerative Cream",
+        "category": "skincare",
+        "subcategory": "moisturizing",
+        "description": "Ультимативный регенерирующий крем с золотом и жемчугом",
+        "key_ingredients": ["24-каратное золото", "жемчужная пудра", "женьшень", "дендробиум"],
+        "volume": "60ml",
+        "price": 45000,
+        "benefits": ["максимальная регенерация", "роскошное питание", "лифтинг"],
+        "texture": "богатый крем",
+        "skin_types": ["зрелая", "очень сухая"],
+        "age_group": "40+",
+        "luxury": true,
+        "limited_edition": false,
+        "usage": "Вечером как завершающий этап ухода"
+      },
+      {
+        "id": "WHO006",
+        "name": "Gong Jin Hyang Hydrating Sunscreen Fluid",
+        "category": "skincare",
+        "subcategory": "sun_protection",
+        "product_line": "gongjinhyang",
+        "description": "Увлажняющий солнцезащитный флюид с травяными экстрактами",
+        "key_ingredients": ["травяные экстракты", "SPF 50+", "гиалуроновая кислота"],
+        "volume": "60ml",
+        "price": 8500,
+        "benefits": ["защита от UV", "увлажнение", "антиоксидантная защита"],
+        "texture": "легкий флюид",
+        "spf": "SPF 50+ PA+++",
+        "skin_types": ["все типы кожи"],
+        "usage": "Утром как завершающий этап ухода"
+      },
+      {
+        "id": "WHO007",
+        "name": "Gongjinhyang Mi Royal Lip Balm",
+        "category": "makeup",
+        "subcategory": "lips",
+        "product_line": "gongjinhyang",
+        "description": "Королевский бальзам для губ с медом и травами",
+        "key_ingredients": ["мед", "пчелиный воск", "травяные экстракты", "масла"],
+        "volume": "3.5g",
+        "price": 3200,
+        "benefits": ["интенсивное питание", "защита", "мягкость"],
+        "texture": "питательный бальзам",
+        "usage": "По необходимости в течение дня"
+      }
+    ],
+    "gift_sets": [
+      {
+        "id": "SET002",
+        "name": "AmorePacific Time Response Discovery Set",
+        "brand": "amorepacific",
+        "category": "sets",
+        "subcategory": "travel_sets",
+        "description": "Дорожный набор антивозрастной линии Time Response",
+        "contents": [
+          "Time Response Skin Reserve Serum 8ml",
+          "Time Response Skin Reserve Cream 8ml", 
+          "Time Response Eye Reserve Cream 3ml",
+          "Treatment Enzyme Cleansing Foam 31ml"
+        ],
+        "price": 4450,
+        "benefits": ["знакомство с линией", "удобство в путешествии", "экономия"],
+        "gift_packaging": true,
+        "travel_friendly": true
+      },
+      {
+        "id": "SET003",
+        "name": "The History of Whoo Cheongidan Luxury Set",
+        "brand": "the_history_of_whoo",
+        "category": "sets",
+        "subcategory": "gift_sets",
+        "description": "Роскошный подарочный набор линии Cheongidan",
+        "contents": [
+          "Cheongidan Radiant Regenerating Essence 40ml",
+          "Cheongidan Radiant Regenerating Cream 30ml",
+          "Cheongidan Eye Cream 8ml",
+          "Gongjinhyang Facial Cream Cleanser 40ml",
+          "Подарочная упаковка"
+        ],
+        "price": 35000,
+        "benefits": ["полный уход", "роскошная упаковка", "экономия 15%"],
+        "gift_packaging": true,
+        "luxury": true,
+        "limited_edition": true
+      },
+      {
+        "id": "SET004",
+        "name": "Sulwhasoo Essential Skincare Routine",
+        "brand": "sulwhasoo", 
+        "category": "sets",
+        "subcategory": "gift_sets",
+        "description": "Базовый набор для ежедневного ухода",
+        "contents": [
+          "Gentle Cleansing Foam 50ml",
+          "Essential Balancing Water 125ml",
+          "Essential Balancing Emulsion 125ml",
+          "Essential Firming Cream 20ml"
+        ],
+        "price": 15800,
+        "benefits": ["полная рутина ухода", "экономия 20%", "подарочная упаковка"],
+        "gift_packaging": true,
+        "beginner_friendly": true
+      }
+    ],
+    "seasonal_collections": [
+      {
+        "id": "SEASON001",
+        "name": "Spring Renewal Collection",
+        "season": "spring",
+        "description": "Весенняя коллекция для обновления и детокса кожи",
+        "featured_products": [
+          "AMP003",
+          "SUL001", 
+          "WHO006"
+        ],
+        "theme": "Обновление и защита",
+        "special_offer": "При покупке любых 2 продуктов - скидка 10%"
+      },
+      {
+        "id": "SEASON002", 
+        "name": "Summer Glow Collection",
+        "season": "summer",
+        "description": "Летняя коллекция для сияния и защиты от солнца",
+        "featured_products": [
+          "AMP007",
+          "WHO006",
+          "AMP004"
+        ],
+        "theme": "Сияние и защита",
+        "special_offer": "Бесплатная доставка при заказе от 10000 руб"
+      }
+    ],
+    "ingredients_glossary": {
+      "ginseng": {
+        "name": "Женьшень",
+        "benefits": ["антивозрастной эффект", "стимуляция кровообращения", "детоксикация"],
+        "suitable_for": ["зрелая кожа", "тусклая кожа"],
+        "brands_using": ["Sulwhasoo", "The History of Whoo"]
+      },
+      "green_tea": {
+        "name": "Зеленый чай",
+        "benefits": ["антиоксидантная защита", "успокаивание", "матирование"],
+        "suitable_for": ["жирная кожа", "проблемная кожа", "чувствительная кожа"],
+        "brands_using": ["AmorePacific"]
+      },
+      "hyaluronic_acid": {
+        "name": "Гиалуроновая кислота",
+        "benefits": ["интенсивное увлажнение", "разглаживание", "упругость"],
+        "suitable_for": ["сухая кожа", "обезвоженная кожа", "все типы кожи"],
+        "brands_using": ["AmorePacific", "Sulwhasoo"]
+      },
+      "gold": {
+        "name": "Золото",
+        "benefits": ["лифтинг", "сияние", "антивозрастной эффект"],
+        "suitable_for": ["зрелая кожа", "люксовый уход"],
+        "brands_using": ["The History of Whoo"]
+      },
+      "pearl": {
+        "name": "Жемчуг",
+        "benefits": ["осветление", "сияние", "выравнивание тона"],
+        "suitable_for": ["тусклая кожа", "пигментация"],
+        "brands_using": ["The History of Whoo"]
+      }
+    },
+    "care_routines": {
+      "morning_routine": {
+        "name": "Утренний уход",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Очищение",
+            "products": ["SUL008", "AMP001"],
+            "description": "Мягкое очищение для подготовки кожи"
+          },
+          {
+            "step": 2,
+            "action": "Тонизирование", 
+            "products": ["SUL004"],
+            "description": "Балансирование pH и подготовка к уходу"
+          },
+          {
+            "step": 3,
+            "action": "Сыворотка/Эссенция",
+            "products": ["SUL001", "AMP006", "WHO001"],
+            "description": "Концентрированный уход по потребностям кожи"
+          },
+          {
+            "step": 4,
+            "action": "Крем для глаз",
+            "products": ["SUL007", "AMP005", "WHO004"],
+            "description": "Специальный уход за деликатной зоной"
+          },
+          {
+            "step": 5,
+            "action": "Увлажнение",
+            "products": ["SUL005", "AMP004"],
+            "description": "Увлажнение и питание кожи"
+          },
+          {
+            "step": 6,
+            "action": "Защита от солнца",
+            "products": ["WHO006", "AMP007"],
+            "description": "Обязательная защита от UV-лучей"
+          }
+        ]
+      },
+      "evening_routine": {
+        "name": "Вечерний уход",
+        "steps": [
+          {
+            "step": 1,
+            "action": "Демакияж",
+            "products": ["WHO002"],
+            "description": "Удаление макияжа и загрязнений"
+          },
+          {
+            "step": 2,
+            "action": "Глубокое очищение",
+            "products": ["SUL008", "AMP001"],
+            "description": "Тщательное очищение кожи"
+          },
+          {
+            "step": 3,
+            "action": "Отшелушивание (2-3 раза в неделю)",
+            "products": ["AMP003"],
+            "description": "Удаление ороговевших клеток"
+          },
+          {
+            "step": 4,
+            "action": "Тонизирование",
+            "products": ["SUL004"],
+            "description": "Восстановление pH баланса"
+          },
+          {
+            "step": 5,
+            "action": "Сыворотка/Эссенция",
+            "products": ["SUL002", "WHO003", "AMP006"],
+            "description": "Интенсивный восстанавливающий уход"
+          },
+          {
+            "step": 6,
+            "action": "Крем для глаз",
+            "products": ["SUL007", "WHO004"],
+            "description": "Ночное восстановление кожи вокруг глаз"
+          },
+          {
+            "step": 7,
+            "action": "Ночной крем",
+            "products": ["SUL003", "WHO005", "AMP002"],
+            "description": "Интенсивное питание и восстановление"
+          },
+          {
+            "step": 8,
+            "action": "Ночная маска (2-3 раза в неделю)",
+            "products": ["SUL009"],
+            "description": "Дополнительное восстановление и питание"
+          }
+        ]
+      }
+    }
+  }
+}
