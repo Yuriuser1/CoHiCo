@@ -37,7 +37,7 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: /domains/gsl.ru/public_html/
+        server-dir: /domains/kohico.ru/public_html/
         exclude: |
           **/.git*
           **/.git*/**
@@ -48,5 +48,5 @@ jobs:
     - name: Verify deployment
       run: |
         echo "✅ Deployment completed!"
-        echo "🌐 Site should be available at: https://gsl.ru"
+        echo "🌐 Site should be available at: https://kohico.ru"
         echo "⏱️ Please wait 5-15 minutes for DNS propagation"
